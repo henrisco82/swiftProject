@@ -39,26 +39,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-cx-yMC">
-                                <rect key="frame" x="3" y="534" width="356" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next Question"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5E-WQ-scx">
-                                <rect key="frame" x="1" y="289" width="372" height="30"/>
+                                <rect key="frame" x="-5" y="293" width="372" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.22404468059539795" green="0.24029269814491272" blue="0.92272299528121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgb-QL-9Xp">
-                                <rect key="frame" x="1" y="449" width="372" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22404468059539795" green="0.24029269814491272" blue="0.92272299528121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="option1pressed:" destination="UiV-fr-l1r" eventType="touchUpInside" id="UYa-Ln-Vxg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bu-ew-pPd">
                                 <rect key="frame" x="1" y="375" width="372" height="30"/>
@@ -67,6 +57,35 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="option2pressed:" destination="UiV-fr-l1r" eventType="touchUpInside" id="NxZ-cU-TWn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qgb-QL-9Xp">
+                                <rect key="frame" x="1" y="449" width="372" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.22404468059539795" green="0.24029269814491272" blue="0.92272299528121948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="option3pressed:" destination="UiV-fr-l1r" eventType="touchUpInside" id="nEE-8R-0lz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgg-xJ-JiG">
+                                <rect key="frame" x="93" y="533" width="141" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVS-cx-yMC">
+                                <rect key="frame" x="3" y="581" width="356" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="UiV-fr-l1r" eventType="touchUpInside" id="hhT-0d-5D5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -77,7 +96,9 @@
                         <outlet property="Option1" destination="m5E-WQ-scx" id="FLi-il-0Iu"/>
                         <outlet property="Option2" destination="6bu-ew-pPd" id="fj8-F8-Unu"/>
                         <outlet property="Option3" destination="Qgb-QL-9Xp" id="fzi-M7-0zi"/>
+                        <outlet property="correct" destination="Bgg-xJ-JiG" id="5K7-ac-vQS"/>
                         <outlet property="nextQuestion" destination="bVS-cx-yMC" id="IcB-uY-Ga1"/>
+                        <outlet property="option3pressed" destination="Qgb-QL-9Xp" id="zr0-Td-3Hu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9A-c6-rBf" userLabel="First Responder" sceneMemberID="firstResponder"/>
