@@ -14,69 +14,70 @@ import UIKit
 class ViewClass: UIViewController {
     
     @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var Option1: UIButton!
+    @IBOutlet weak var Option3: UIButton!
+    @IBOutlet weak var Option2: UIButton!
     
     @IBOutlet weak var correct: UILabel!
     
-    @IBOutlet weak var Option1: UIButton!
     
-    @IBOutlet weak var Option2: UIButton!
     
-    @IBOutlet weak var Option3: UIButton!
     
-    @IBOutlet weak var nextQuestion: UIButton!
+    @IBOutlet weak var Next: UIButton!
     
     var questionNumber = Int()
     
+    var currentQuestion = 0
+    var rightAnswerPlacement = 0
     var questions = [String]()
     var tempOption1 = [String]()
     var tempOption2 = [String]()
     var tempOption3 = [String]()
     var Options = [[String]]()
     
-    @IBAction func nextQuestion(_ sender: UIButton) {
-         //  viewDidLoad()
-    }
-    
-    @IBAction func option1pressed(_ sender: UIButton) {
+   
+   
+    @IBAction func option1checked(_ sender: UIButton) {
         if questionNumber == 0{
-           // nextQuestion.isHidden = false
+            Next.isHidden = false
             correct.text = "correct"
         }else if questionNumber == 1{
-            //nextQuestion.isHidden = false
-            correct.text = "correct"
+            Next.isHidden = false
+            correct.text = "incorrect"
         }else if questionNumber == 2{
-           // nextQuestion.isHidden = false
-            correct.text = "correct"
-        }
-        
-    }
-    
-    @IBAction func option2pressed(_ sender: UIButton) {
-        if questionNumber == 0{
-            //nextQuestion.isHidden = false
-            correct.text = "correct"
-        }else if questionNumber == 1{
-            //nextQuestion.isHidden = false
-            correct.text = "correct"
-        }else if questionNumber == 2{
-           // nextQuestion.isHidden = false
-            correct.text = "correct"
+            Next.isHidden = false
+            correct.text = "incorrect"
         }
     }
     
-  
-    @IBAction func option3pressed(_ sender: UIButton) {
+    @IBAction func option2checked(_ sender: UIButton) {
         if questionNumber == 0{
-            //nextQuestion.isHidden = false
+           Next.isHidden = false
             correct.text = "correct"
         }else if questionNumber == 1{
-            //nextQuestion.isHidden = false
+            Next.isHidden = false
+            correct.text = "incorrect"
+        }else if questionNumber == 2{
+            Next.isHidden = false
+            correct.text = "incorrect"
+        }
+    }
+    
+    @IBAction func option3checked(_ sender: UIButton) {
+        if questionNumber == 0{
+           Next.isHidden = false
+            correct.text = "correct"
+        }else if questionNumber == 1{
+           Next.isHidden = false
             correct.text = "correct"
         }else if questionNumber == 2{
-            //nextQuestion.isHidden = false
+            Next.isHidden = false
             correct.text = "correct"
         }
-
+    }
+    
+    @IBAction func NextQuestion(_ sender: UIButton) {
+         viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,8 +88,10 @@ class ViewClass: UIViewController {
     
     override func viewDidLoad() {
         questionNumber = Int(arc4random_uniform(3))
-        nextQuestion.isHidden = true
+        Next.isHidden = true
         correct.text = ""
+        
+       
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -124,8 +127,6 @@ class ViewClass: UIViewController {
                 self.Options.append(self.tempOption2)
                 self.Options.append(self.tempOption3)
                 
-                
-                
                 switch self.questionNumber{
                 case 0:
                     self.Label.text = self.questions[0]
@@ -140,7 +141,7 @@ class ViewClass: UIViewController {
                     self.Option3.setTitle(self.Options[2][1], for: .normal)
                     break
                 case 2:
-                    self.Label.text = self.questions[1]
+                    self.Label.text = self.questions[2]
                     self.Option1.setTitle(self.Options[0][2], for: .normal)
                     self.Option2.setTitle(self.Options[1][2], for: .normal)
                     self.Option3.setTitle(self.Options[2][2], for: .normal)
@@ -148,10 +149,9 @@ class ViewClass: UIViewController {
                 default:
                     break
                 }
-                
-            
-                
-                
+
+               
+
                
             }
             
