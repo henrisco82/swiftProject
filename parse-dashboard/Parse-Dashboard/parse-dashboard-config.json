@@ -1,0 +1,12 @@
+{
+  "apps": [{
+    "serverURL": "http://localhost:1337/parse",
+    "appId": "myAppId",
+    "masterKey": "mstk",
+    "appName": "questionnaireapp",
+    "iconName": "",
+    "primaryBackgroundColor": "",
+    "secondaryBackgroundColor": ""
+  }],
+  "iconsFolder": "icons"
+}
