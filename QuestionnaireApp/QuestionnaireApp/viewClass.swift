@@ -17,7 +17,7 @@ class ViewClass: UIViewController {
     @IBOutlet weak var Option1: UIButton!
     @IBOutlet weak var Option3: UIButton!
     @IBOutlet weak var Option2: UIButton!
-    
+    @IBOutlet weak var score: UILabel!
     @IBOutlet weak var correct: UILabel!
     
     
@@ -26,9 +26,8 @@ class ViewClass: UIViewController {
     @IBOutlet weak var Next: UIButton!
     
     var questionNumber = Int()
+     var s = 0
     
-    var currentQuestion = 0
-    var rightAnswerPlacement = 0
     var questions = [String]()
     var tempOption1 = [String]()
     var tempOption2 = [String]()
@@ -41,6 +40,8 @@ class ViewClass: UIViewController {
         if questionNumber == 0{
             Next.isHidden = false
             correct.text = "correct"
+            s += 1
+            // score.text = s
         }else if questionNumber == 1{
             Next.isHidden = false
             correct.text = "incorrect"
@@ -87,9 +88,11 @@ class ViewClass: UIViewController {
     }
     
     override func viewDidLoad() {
-        questionNumber = Int(arc4random_uniform(3))
+        questionNumber = Int(arc4random_uniform(2))
         Next.isHidden = true
         correct.text = ""
+        score.text = ""
+        
         
        
         super.viewDidLoad()
@@ -126,6 +129,8 @@ class ViewClass: UIViewController {
                 self.Options.append(self.tempOption1)
                 self.Options.append(self.tempOption2)
                 self.Options.append(self.tempOption3)
+                
+                
                 
                 switch self.questionNumber{
                 case 0:
