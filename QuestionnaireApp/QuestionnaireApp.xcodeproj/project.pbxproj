@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3D35F620AAC68400DB935C /* ViewControllerFinish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D35F520AAC68400DB935C /* ViewControllerFinish.swift */; };
 		3F6D288C209C3542000319E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D288B209C3542000319E2 /* AppDelegate.swift */; };
 		3F6D288E209C3542000319E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D288D209C3542000319E2 /* ViewController.swift */; };
 		3F6D2891209C3542000319E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D288F209C3542000319E2 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		04BD0740C4ADD91C2EA35242 /* Pods_QuestionnaireApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionnaireApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3D35F520AAC68400DB935C /* ViewControllerFinish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFinish.swift; sourceTree = "<group>"; };
 		3F6D2888209C3541000319E2 /* QuestionnaireApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionnaireApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F6D288B209C3542000319E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F6D288D209C3542000319E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				3F6D288B209C3542000319E2 /* AppDelegate.swift */,
 				3F6D288D209C3542000319E2 /* ViewController.swift */,
 				3F6D28A0209C728A000319E2 /* viewClass.swift */,
+				3F3D35F520AAC68400DB935C /* ViewControllerFinish.swift */,
 				3F6D288F209C3542000319E2 /* Main.storyboard */,
 				3F6D2895209C3542000319E2 /* Assets.xcassets */,
 				3F6D2897209C3542000319E2 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 				3F6D288C209C3542000319E2 /* AppDelegate.swift in Sources */,
 				3F6D2894209C3542000319E2 /* QuestionnaireApp.xcdatamodeld in Sources */,
 				3F6D28A1209C728A000319E2 /* viewClass.swift in Sources */,
+				3F3D35F620AAC68400DB935C /* ViewControllerFinish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
