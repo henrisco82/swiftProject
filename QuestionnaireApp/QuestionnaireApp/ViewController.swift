@@ -28,6 +28,7 @@ class ViewController: UIViewController {
             (success: Bool, error: Error?) in
             if(success) {
                 print("Object has been saved.")
+            
             } else {
                 print("There was an error...")
             }
@@ -36,13 +37,14 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         
-        
-        
-        
-        
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let finish = segue.destination as! ViewClass
+        finish.firstname = firstname.text!
+        finish.lastname = lastname.text!
+        finish.dateOfBirth = dateOfBirth.text!
     }
 
     override func didReceiveMemoryWarning() {

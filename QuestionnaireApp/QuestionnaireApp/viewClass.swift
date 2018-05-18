@@ -25,7 +25,9 @@ class ViewClass: UIViewController {
     
     @IBOutlet weak var Next: UIButton!
 
-    
+    var firstname: String = ""
+    var lastname: String = ""
+    var dateOfBirth: String = ""
     
     var questionNumber = 0
      var s = 0
@@ -204,6 +206,11 @@ class ViewClass: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let finish = segue.destination as! ViewControllerFinish
+        finish.finalScore = self.score.text!
+        finish.key = self.firstname
+        finish.key2 = self.lastname
+        finish.key3 = self.dateOfBirth
         
     }
                 

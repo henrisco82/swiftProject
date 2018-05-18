@@ -1,0 +1,2 @@
+{"error":{"code":111,"message":"schema mismatch for Response.score; expected Number but got String"},"level":"error","message":"Error generating response. ParseError {\n  code: 111,\n  message: 'schema mismatch for Response.score; expected Number but got String' }","timestamp":"2018-05-18T07:45:01.677Z"}
+{"code":111,"message":"schema mismatch for Response.score; expected Number but got String","level":"error","timestamp":"2018-05-18T07:45:01.681Z"}
